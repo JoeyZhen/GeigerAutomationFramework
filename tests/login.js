@@ -13,7 +13,8 @@ async function cmsSearchuser() {
     // options.addArguments('--headless');
 
    
-    let options = new firefox.Options().headless();
+    let options = new firefox.Options();
+    options.addArguments('--headless');
     let driver = await new Builder().forBrowser("firefox").setFirefoxOptions(options).build();
 
 
