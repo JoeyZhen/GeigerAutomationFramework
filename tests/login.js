@@ -6,11 +6,11 @@ const LoginPage = require('../POM/loginPage');
 
 async function cmsSearchuser() {
 
-    // const options = new firefox.Options();
+    const options = new firefox.Options();
     // options.addArguments('--disable-blink-features=AutomationControlled');
     // options.addArguments('--disable-infobars');
     // options.addArguments('--start-maximized');
-    // options.addArguments('--headless');
+    options.addArguments('--headless');
 
     let driver = await new Builder().forBrowser("firefox").build();
 
