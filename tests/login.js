@@ -12,7 +12,7 @@ async function cmsSearchuser() {
     // options.addArguments('--start-maximized');
     // options.addArguments('--headless');
 
-    let driver = await new Builder().forBrowser("chrome").build();
+    let driver = await new Builder().forBrowser("firefox").build();
 
 
     const loginPage = new LoginPage(driver);
