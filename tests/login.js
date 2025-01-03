@@ -2,7 +2,7 @@ const {Builder, By, Key} = require("selenium-webdriver");
 const chrome = require('selenium-webdriver/chrome')
 const LoginPage = require('../POM/loginPage');
 
-// const firefox = require('selenium-webdriver/firefox');
+const firefox = require('selenium-webdriver/firefox');
 
 async function cmsSearchuser() {
 
