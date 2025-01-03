@@ -1,4 +1,5 @@
 const {Builder, By, Key} = require("selenium-webdriver");
+const chrome = require('selenium-webdriver/chrome')
 const LoginPage = require('../POM/loginPage');
 
 // const firefox = require('selenium-webdriver/firefox');
@@ -11,7 +12,7 @@ async function cmsSearchuser() {
     // options.addArguments('--start-maximized');
     // options.addArguments('--headless');
 
-    let driver = await new Builder().forBrowser("firefox").build();
+    let driver = await new Builder().forBrowser("chrome").build();
 
 
     const loginPage = new LoginPage(driver);
