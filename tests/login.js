@@ -13,9 +13,9 @@ async function cmsSearchuser() {
     // options.addArguments('--headless');
 
    
-    let options = new firefox.Options();
-    options.addArguments('--headless');
-    let driver = await new Builder().forBrowser("firefox").setFirefoxOptions(options).build();
+    // let options = new firefox.Options();
+    // options.addArguments('--headless');
+    let driver = await new Builder().forBrowser("firefox").setFirefoxOptions().build();
 
 
     const loginPage = new LoginPage(driver);
