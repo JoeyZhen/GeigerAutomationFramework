@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "mocha": "^11.0.1",
     "selenium-webdriver": "^4.27.0"
   }
 }
