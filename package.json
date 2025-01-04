@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --runInBand --forceExit"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "mocha": "^11.0.1",
     "selenium-webdriver": "^4.27.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
