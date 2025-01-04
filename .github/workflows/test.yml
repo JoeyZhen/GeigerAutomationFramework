@@ -24,5 +24,8 @@ jobs:
 
     - name: Install
       run: npm install
+
+    - name: Mocha
+      run: npm install mocha
     - name: Test
       run: node tests/login.js
