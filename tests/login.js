@@ -1,5 +1,6 @@
 const {Builder, By, Key, Options} = require("selenium-webdriver");
 const LoginPage = require('../POM/loginPage');
+import { describe, it } from 'mocha';
 
 // const firefox = require('selenium-webdriver/firefox');
 
