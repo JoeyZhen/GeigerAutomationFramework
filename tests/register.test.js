@@ -1,9 +1,10 @@
 const {Builder, By, Key} = require("selenium-webdriver");
+const RegisterPage = require('../POM/registerPage');
 
 // const firefox = require('selenium-webdriver/firefox');
 
-async function cmsSearchuser() {
-
+describe('Test', () => { jest.setTimeout(1000000);
+test("Register with https://yourlogo.geiger.com/", async function() {
     // const options = new firefox.Options();
     // options.addArguments('--disable-blink-features=AutomationControlled');
     // options.addArguments('--disable-infobars');
@@ -12,22 +13,31 @@ async function cmsSearchuser() {
 
     let driver = await new Builder().forBrowser("firefox").build();
 
-    await driver.get("https://yourlogo.geiger.com/");
+    const registerPage = new RegisterPage(driver);
+    
+    
+    await registerPage.openUrl();
 
-    await driver.manage().window().maximize();
+    await registerPage.register('','','','','','');
 
-    await driver.findElement(By.linkText('Register')).click();
+    await driver.sleep(4000);
 
-    await driver.findElement(By.id('first_name')).sendKeys("");
-    await driver.findElement(By.id('last_name')).sendKeys("");
-    await driver.findElement(By.id('email')).sendKeys("");
-    await driver.findElement(By.id('phone')).sendKeys("");
-    await driver.findElement(By.id('password')).sendKeys("");
-    await driver.findElement(By.id('password-confirm')).sendKeys("");
-
-    await driver.quit();
+    
 
 
-}
+    // await driver.findElement(By.linkText('Register')).click();
 
-cmsSearchuser()
+    // await driver.findElement(By.id('first_name')).sendKeys("");
+    // await driver.findElement(By.id('last_name')).sendKeys("");
+    // await driver.findElement(By.id('email')).sendKeys("");
+    // await driver.findElement(By.id('phone')).sendKeys("");
+    // await driver.findElement(By.id('password')).sendKeys("");
+    // await driver.findElement(By.id('password-confirm')).sendKeys("");
+
+    // await driver.findElement(By.xpath('//button[normalize-space()="Register"]')).click();
+
+    await driver.close();
+
+
+});
+});
