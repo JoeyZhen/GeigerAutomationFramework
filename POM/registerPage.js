@@ -17,7 +17,6 @@ class registerPage{
         
     async openUrl(){
         await this.driver.get(this.url);
-        await this.driver.manage().window().maximize();
     }
 
     async register(firstname, lastname, email, phone, password, confirmPassword){
