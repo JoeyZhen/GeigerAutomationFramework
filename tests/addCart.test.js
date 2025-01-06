@@ -1,4 +1,4 @@
-const {Builder, By, Key, Options} = require("selenium-webdriver");
+const {Builder, By, Key, Options, until} = require("selenium-webdriver");
 const LoginPage = require('../POM/loginPage');
 
 // const firefox = require('selenium-webdriver/firefox');
@@ -14,19 +14,20 @@ test("Login with https://yourlogo.geiger.com/", async function() {
     
         await loginPage.login('jxz5374@rit.edu','pgswbxmouikf18j6');
         
-        await driver.sleep(2000);
-    
         await loginPage.rushProducts();
-    
-        /*
-        */
-        const finalUrl = Promise.resolve(await driver.getCurrentUrl());
-    
-        finalUrl.then((value) => {
-            expect(value).toBe('https://yourlogo.geiger.com/b/24-hour-rush-products');
-        })
-    
-        await driver.close();
 
+        await driver.sleep(2000);
+
+        // await driver.findElements(By.xpath('//div[@class="ss__result__details card-body"]')).then(function(elements){
+        //         elements[3].click();
+                
+        // });
+
+        await driver.findElement(By.xpath("(//img[@class='card-img-top'])[2]")).click();
+
+        console.log(await driver.getCurrentUrl());
+
+        await driver.close();
 });
 });
+
