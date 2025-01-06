@@ -28,8 +28,10 @@ jobs:
     - name: Jest
       run: npm install --save-dev jest
 
+    - name: Test Report
+      run: npm install jest-html-reporter --save-dev
+
     - name: Test
       run: npm test
 
-    - name: Test Report
-      run: npm install jest-html-reporter --save-dev
+
