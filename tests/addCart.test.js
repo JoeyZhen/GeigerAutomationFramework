@@ -16,7 +16,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
         
         await loginPage.rushProducts();
 
-        await driver.sleep(2000);
+        await driver.manage().setTimeouts({ implicit: 3000 });
 
         // await driver.findElements(By.xpath('//div[@class="ss__result__details card-body"]')).then(function(elements){
         //         elements[3].click();
