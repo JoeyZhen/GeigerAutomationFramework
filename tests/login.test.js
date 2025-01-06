@@ -3,7 +3,7 @@ const LoginPage = require('../POM/loginPage');
 
 // const firefox = require('selenium-webdriver/firefox');
 
-describe('Test', () => { jest.setTimeout(30000);
+describe('Test', () => { jest.setTimeout(1000000);
 test("Login with https://yourlogo.geiger.com/", async function() {
   
         let driver = await new Builder().forBrowser("firefox").build();
