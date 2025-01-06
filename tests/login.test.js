@@ -8,9 +8,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
   
         let driver = await new Builder().forBrowser("firefox").build();
 
-
         const loginPage = new LoginPage(driver);
-    
     
         await loginPage.openUrl();
     
@@ -20,11 +18,12 @@ test("Login with https://yourlogo.geiger.com/", async function() {
     
         await loginPage.rushProducts();
     
-        
+        /*
+        */
         const finalUrl = Promise.resolve(await driver.getCurrentUrl());
     
         finalUrl.then((value) => {
-            console.log(value);
+            expect(value).toBe('https://yourlogo.geiger.com/b/24-hour-rush-products');
         })
     
         await driver.close();
