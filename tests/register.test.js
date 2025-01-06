@@ -20,8 +20,6 @@ test("Register with https://yourlogo.geiger.com/", async function() {
 
     await registerPage.register('','','','','','');
 
-    await driver.sleep(4000);
-
     await driver.close();
 
 
