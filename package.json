@@ -6,13 +6,7 @@
     "test": "jest"
   },
   "jest":{
-    "collectCoverage": true,
-    "coverageReporters": [
-      "lcov"
-    ],
-    "coverageDirectory": "./output/coverage/",
-    "reporters": ["./node_modules/jest-html-reporter"]
-  
+    "collectCoverage": true
   },
 
   "author": "",
