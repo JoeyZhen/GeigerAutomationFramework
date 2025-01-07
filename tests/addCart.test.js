@@ -18,14 +18,16 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.manage().setTimeouts({ implicit: 3000 });
 
-        // await driver.findElements(By.xpath('//div[@class="ss__result__details card-body"]')).then(function(elements){
-        //         elements[3].click();
-                
-        // });
-
         await driver.findElement(By.xpath("(//img[@class='card-img-top'])[2]")).click();
 
-        console.log(await driver.getCurrentUrl());
+        await driver.findElement(By.id('product-price-tier-300-qty')).click();
+
+        await driver.findElement(By.id('product-price-tier-150-qty')).click();
+
+        await driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+        await driver.manage().setTimeouts({ implicit: 3000 });
+
 
         await driver.close();
 });
