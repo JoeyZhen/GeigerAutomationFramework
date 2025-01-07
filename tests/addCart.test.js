@@ -20,13 +20,14 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.findElement(By.xpath("(//img[@class='card-img-top'])[2]")).click();
 
-        await driver.findElement(By.id('product-price-tier-300-qty')).click();
+        await driver.findElement(By.xpath("(//td[@role='button'])[3]")).click();
 
-        await driver.findElement(By.id('product-price-tier-150-qty')).click();
+        await driver.findElement(By.xpath("(//td[@role='button'])[1]")).click();
 
         await driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        await driver.manage().setTimeouts({ implicit: 3000 });
+        // await driver.manage().setTimeouts({ implicit: 5000 });
+        await driver.sleep(5000);
 
 
         await driver.close();
