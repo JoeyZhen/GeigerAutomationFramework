@@ -21,9 +21,8 @@ class loginPage{
         await this.driver.findElement(this.logintext).click();
         await this.driver.findElement(this.usernameInput).sendKeys(username);
         await this.driver.findElement(this.passwordInput).sendKeys(password);
-        await this.driver.findElement(this.rememberMe).click();
+        // await this.driver.findElement(this.rememberMe).click();
         await this.driver.findElement(this.loginButton).click();
-        await this.driver.manage().setTimeouts({ implicit: 10000 });
     }
 
     async rushProducts(){
