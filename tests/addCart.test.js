@@ -12,6 +12,8 @@ test("Login with https://yourlogo.geiger.com/", async function() {
         const loginPage = new LoginPage(driver);
     
         await loginPage.openUrl();
+
+        await driver.manage().window().setRect({ width: 1600, height: 1000 });
     
         await loginPage.login('chunjingzhen@gmail.com','pgswbxmouikf18j6');
         

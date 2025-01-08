@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1736305577598" clover="3.2.0">
-  <project timestamp="1736305577598" name="All files">
-    <metrics statements="25" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3" elements="30" coveredelements="21" complexity="0" loc="25" ncloc="25" packages="1" files="2" classes="2"/>
+<coverage generated="1736373813925" clover="3.2.0">
+  <project timestamp="1736373813926" name="All files">
+    <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5" elements="28" coveredelements="28" complexity="0" loc="23" ncloc="23" packages="1" files="2" classes="2"/>
     <file name="loginPage.js" path="/Users/joeyzhen/selenium_Javascript/POM/loginPage.js">
-      <metrics statements="18" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
       <line num="7" count="1" type="stmt"/>
@@ -17,20 +17,18 @@
       <line num="21" count="1" type="stmt"/>
       <line num="22" count="1" type="stmt"/>
       <line num="23" count="1" type="stmt"/>
-      <line num="24" count="1" type="stmt"/>
-      <line num="25" count="0" type="stmt"/>
-      <line num="26" count="0" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
-      <line num="35" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
     </file>
     <file name="screenshotHelper.js" path="/Users/joeyzhen/selenium_Javascript/POM/screenshotHelper.js">
-      <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="5" count="0" type="stmt"/>
-      <line num="6" count="0" type="stmt"/>
-      <line num="7" count="0" type="stmt"/>
-      <line num="8" count="0" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
       <line num="11" count="1" type="stmt"/>
     </file>
   </project>
