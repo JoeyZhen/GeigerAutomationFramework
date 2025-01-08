@@ -1,5 +1,6 @@
 const {Builder, By, Key, Options, until} = require("selenium-webdriver");
 const LoginPage = require('../POM/loginPage');
+const { takeScreenshot } = require("../POM/screenshotHelper");
 
 // const firefox = require('selenium-webdriver/firefox');
 
@@ -12,7 +13,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
     
         await loginPage.openUrl();
     
-        await loginPage.login('jxz5374@rit.edu','pgswbxmouikf18j6');
+        await loginPage.login('chunjingzhen@gmail.com','pgswbxmouikf18j6');
         
         await loginPage.rushProducts();
 
@@ -20,15 +21,19 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.findElement(By.xpath("(//img[@class='card-img-top'])[2]")).click();
 
+        const title = Promise.resolve(await driver.findElement(By.xpath("//span[@class='text-brand']")).getText());
+
         await driver.findElement(By.xpath("(//td[@role='button'])[3]")).click();
 
         await driver.findElement(By.xpath("(//td[@role='button'])[1]")).click();
 
-        await driver.findElement(By.xpath("//button[@type='submit']")).click();
+        await driver.findElement(By.xpath("//button[normalize-space()='ADD TO QUOTE']")).click();
 
-        // await driver.manage().setTimeouts({ implicit: 5000 });
-        await driver.sleep(5000);
+        const expected = await driver.findElement(By.xpath("//div[@class='media-body']//a[@class='text-dark']")).getText();
+       
+        title.then((value) => {expect(value).toBe(expected);})
 
+        await takeScreenshot(driver, 'final.png');
 
         await driver.close();
 });

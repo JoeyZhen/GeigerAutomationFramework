@@ -15,7 +15,6 @@ test("Register with https://yourlogo.geiger.com/", async function() {
 
     const registerPage = new RegisterPage(driver);
     
-    
     await registerPage.openUrl();
 
     await registerPage.register('','','','','','');
