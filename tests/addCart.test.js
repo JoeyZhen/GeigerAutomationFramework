@@ -35,7 +35,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
        
         title.then((value) => {expect(value).toBe(expected);})
 
-        await takeScreenshot(driver, 'final.png');
+        // await takeScreenshot(driver, 'final.png');
 
         await driver.close();
 });
