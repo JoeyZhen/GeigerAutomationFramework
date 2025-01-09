@@ -32,6 +32,6 @@ jobs:
       run: npm install jest-html-reporter --save-dev
 
     - name: Test
-      run: npm test
+      run: npx jest
 
 
