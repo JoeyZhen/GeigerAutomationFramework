@@ -13,7 +13,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
     
         await loginPage.openUrl();
 
-        await driver.manage().window().setRect({ width: 1600, height: 1000 });
+        await driver.manage().window().setRect({ width: 2160, height: 1080 });
     
         await loginPage.login('chunjingzhen@gmail.com','pgswbxmouikf18j6');
         
