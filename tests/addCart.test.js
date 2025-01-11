@@ -29,6 +29,8 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.findElement(By.xpath("(//td[@role='button'])[1]")).click();
 
+        await driver.manage().setTimeouts({ implicit: 3000 });
+
         await driver.findElement(By.xpath("//button[normalize-space()='ADD TO QUOTE']")).click();
 
         const expected = await driver.findElement(By.xpath("//div[@class='media-body']//a[@class='text-dark']")).getText();
