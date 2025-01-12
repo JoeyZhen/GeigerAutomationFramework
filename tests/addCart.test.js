@@ -21,7 +21,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.manage().setTimeouts({ implicit: 3000 });
 
-        await driver.findElement(By.xpath("(//img[@class='card-img-top'])[3]")).click();
+        await driver.findElement(By.xpath("(//img[@class='card-img-top'])[2]")).click();
 
         const title = Promise.resolve(await driver.findElement(By.xpath("//span[@class='text-brand']")).getText());
 
