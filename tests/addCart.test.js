@@ -31,11 +31,19 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.findElement(By.xpath("(//td[@role='button'])[1]")).click();
 
-        await driver.executeScript('window.scrollBy(0, 500);');
+        // await driver.executeScript('window.scrollBy(0, 500);');
 
         await driver.manage().setTimeouts({ implicit: 2000 });
 
-        await driver.findElement(By.xpath("//button[normalize-space()='ADD TO QUOTE']")).click();
+        let button = await driver.findElement(By.xpath("//button[normalize-space()='ADD TO QUOTE']"));
+
+        await driver.executeScript("arguments[0].scrollIntoView(true);", button);
+
+        await driver.manage().setTimeouts({ implicit: 2000 });
+
+        button.click();
+
+        await driver.manage().setTimeouts({ implicit: 2000 });
 
         /* Title validation*/
         const expected = await driver.findElement(By.xpath("//div[@class='media-body']//a[@class='text-dark']")).getText();
