@@ -6,17 +6,15 @@ const LoginPage = require('../POM/loginPage');
 describe('Test', () => { jest.setTimeout(1000000);
 test("Login with https://yourlogo.geiger.com/", async function() {
   
+        /*launch the browser and navigate to the Geiger website*/   
         let driver = await new Builder().forBrowser("firefox").build();
-
         const loginPage = new LoginPage(driver);
-
-        /*launch the browser and navigate to the Geiger website*/
         await loginPage.openUrl();
     
         /*Login to the Geiger website*/
         await loginPage.login('chunjingzhen@gmail.com','pgswbxmouikf18j6');
         
-        /*Navigate to the Rush products page*/
+        /*Navigate to the Rush products page Testing*/
         await loginPage.rushProducts();
     
         /*Verify the Url is matching with the expected result.*/

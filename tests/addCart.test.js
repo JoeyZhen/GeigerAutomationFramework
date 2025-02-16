@@ -19,7 +19,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
         
         await loginPage.rushProducts();
 
-        await driver.manage().setTimeouts({ implicit: 3000 });
+        await driver.manage().setTimeouts({ implicit: 2000 });
 
         await driver.findElement(By.xpath("(//img[@class='card-img-top'])[2]")).click();
 
@@ -31,13 +31,13 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.executeScript('window.scrollBy(0, 500);');
 
-        await driver.manage().setTimeouts({ implicit: 3000 });
-
         await driver.findElement(By.xpath("//button[normalize-space()='ADD TO QUOTE']")).click();
 
+        /* Title validation*/
         const expected = await driver.findElement(By.xpath("//div[@class='media-body']//a[@class='text-dark']")).getText();
-       
         title.then((value) => {expect(value).toBe(expected);})
+
+
 
         await takeScreenshot(driver, 'final.png');
 
