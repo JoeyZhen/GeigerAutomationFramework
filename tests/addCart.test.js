@@ -31,7 +31,7 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.findElement(By.xpath("(//td[@role='button'])[1]")).click();
 
-        await driver.executeScript('window.scrollBy(0, 800);');
+        await driver.executeScript('window.scrollBy(0, 500);');
 
         await driver.manage().setTimeouts({ implicit: 2000 });
 
