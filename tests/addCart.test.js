@@ -33,6 +33,8 @@ test("Login with https://yourlogo.geiger.com/", async function() {
 
         await driver.executeScript('window.scrollBy(0, 500);');
 
+        await driver.manage().setTimeouts({ implicit: 2000 });
+
         await driver.findElement(By.xpath("//button[normalize-space()='ADD TO QUOTE']")).click();
 
         /* Title validation*/
